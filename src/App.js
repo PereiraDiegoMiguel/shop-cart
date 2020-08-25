@@ -1,22 +1,45 @@
 import React from 'react';
+import data from './data.json';
+import Products from './components/Products';
 
-function App() {
-  return (
-    <div className="grid-container">
+class App extends React.Component {
 
-      <header className="header">
-        <a href="/">Shopping Cart</a>
-      </header>
+  constructor() {
+    super();
+    this.state = {
+      products: data.products,
+      size: "",
+      sort: "",
+    }
+  }
 
-      <main className="main">
-        Product List
-      </main>
 
-      <footer className="footer">
-        Footer
+  render() {
+    return (
+      <div className="grid-container">
+
+        <header className="header">
+          <a href="/">Shopping Cart</a>
+        </header>
+
+        <main className="main">
+          <div className="content">
+            <div className="main">
+              <Products products={this.state.products}/>
+            </div>
+            <div className="sidebar">
+              Cart Items
+            </div>
+          </div>
+        </main>
+
+        <footer className="footer">
+          Footer
       </footer>
-    </div>
-  );
+      </div>
+    );
+  }
+
 }
 
 export default App;
