@@ -122,6 +122,7 @@ footer {
 }
 .button-primary {
   background-color: #f0c040;
+  height: 4rem;
 }
 /* Filter */
 .filter {
