@@ -16,6 +16,8 @@ You will also see any lint errors in the console.
 
 - npm install react-reveal
 - npm install react-modal
+- npm install nodemon
+- npm install express body-parser mongoose shortid
 
 ### `npm test`
 
