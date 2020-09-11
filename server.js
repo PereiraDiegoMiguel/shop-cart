@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 
 
-mongoose.connect("mongodb://localhost/shop-cart",{
+mongoose.connect("mongodb://localhost:27017/shop-cart",{
   useNewUrlParser: true, 
   useFindAndModify: false, 
   useUnifiedTopology: true, 
@@ -32,7 +32,7 @@ app.get("/api/products", async (req, res) => {
   res.send(products);
 });
 
-app.post("api/products", async (req, res) => {
+app.post("/api/products", async (req, res) => {
   const newProduct = new Product(req.body);
   const savedProduct = await newProduct.save();
   res.send(savedProduct);
