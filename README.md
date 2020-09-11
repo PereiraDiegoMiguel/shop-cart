@@ -18,7 +18,7 @@ You will also see any lint errors in the console.
 - npm install react-modal
 - npm install nodemon
 - npm install express body-parser mongoose shortid
-
+- npm install redux react-redux redux-thunk
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
